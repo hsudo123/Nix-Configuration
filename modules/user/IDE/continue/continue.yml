@@ -1,0 +1,14 @@
+name: Ollama
+version: 1.0.0
+schema: v1
+models:
+  - name: Gemma4:e4b
+    provider: ollama
+    apiBase: http://localhost:11434
+    model: gemma4:e4b-mlx
+    roles:
+      - chat
+      - edit
+      - apply
+      - rerank
+      - autocomplete

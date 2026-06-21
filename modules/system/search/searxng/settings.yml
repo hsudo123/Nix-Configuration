@@ -1,0 +1,123 @@
+use_default_settings: true
+
+# 官方的 Server 與 限制器 設定
+server:
+  base_url: "http://localhost:55688"
+  port: 55688
+  bind_address: "127.0.0.1"
+  secret_key: "hanyu_super_secret_local_key_string" # 替代原本 Linux 的 sops 密鑰
+  limiter: false # 本地單人使用建議關閉限制器，避免自己被 ban
+  image_proxy: false
+  method: "GET"
+
+# 官方的 UI 設定
+ui:
+  query_in_title: true
+  center_alignment: false
+  infinite_scroll: false # 官方是 false，推薦開 true 體驗比較好
+  default_theme: "simple"
+  theme_args:
+    simple_style: "auto"
+  search_on_category_select: true
+  hotkeys: "vim"
+  url_formatting: pretty
+
+# 官方的搜尋行為設定
+search:
+  safe_search: 0
+  autocomplete: "duckduckgo"
+  favicon_resolver: "duckduckgo"
+  ban_time_on_fail: 5
+  max_ban_time_on_fail: 120
+  formats:
+    - html
+    - json
+
+# 🎯 官方示範的龐大搜尋引擎清單 (完全保留其邏輯)
+engines:
+  - name : google
+    engine : google
+    disabled: false
+    categories: general
+
+  - name: duckduckgo
+    engine: duckduckgo
+    disabled: false
+    categories: general
+
+  - name: bing
+    engine: bing
+    disabled: false
+    categories: general
+
+  - name: google images
+    engine: google_images
+    disabled: false
+    categories: images
+
+  - name: brave
+    engine: brave
+    disabled: true
+
+  - name: wikidata
+    engine: wikidata
+    disabled: true
+
+  - name: wikipedia
+    engine: wikipedia
+    disabled: true
+  
+  - name: startpage
+    engine: startpage
+    disabled: true
+  
+  - name: torch
+    engine: torch
+    inactive: true
+  
+  - name: ahmia
+    engine: ahmia
+    inactive: true
+
+# 官方的請求優化設定
+outgoing:
+  request_timeout: 1.5
+  max_request_timeout: 15.0
+  pool_connections: 100
+  pool_maxsize: 15
+  enable_http2: true
+
+plugins:
+  searx.plugins.calculator.SXNGPlugin:
+    active: true
+
+  searx.plugins.infinite_scroll.SXNGPlugin:
+    active: false
+
+  searx.plugins.hash_plugin.SXNGPlugin:
+    active: true
+
+  searx.plugins.self_info.SXNGPlugin:
+    active: true
+
+  searx.plugins.tracker_url_remover.SXNGPlugin:
+    active: true
+
+  searx.plugins.unit_converter.SXNGPlugin:
+    active: true
+
+  searx.plugins.hostnames.SXNGPlugin:
+    active: true
+
+  searx.plugins.oa_doi_rewrite.SXNGPlugin:
+    active: true
+
+  searx.plugins.tor_check.SXNGPlugin:
+    active: false
+
+# 🎯 網域過濾設定（Hostname Filter）
+hostnames:
+  # 移除（隱藏）以下網域的搜尋結果
+  remove:
+    - "artic.edu"
+    - "commons.wikimedia.org"

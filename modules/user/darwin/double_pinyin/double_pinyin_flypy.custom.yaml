@@ -1,0 +1,11 @@
+patch:
+  # 啟用 Rime 內建的的簡轉繁體(OpenCC)濾鏡
+  switches/@next:
+    name: simplification
+    reset: 1 # 👈 1代表預設開啟繁體輸出 0代表預設簡體
+    states: [ 漢字, 繁體 ]
+  
+  # 將簡轉繁濾鏡掛載到選單渲染管道中
+  simplifier:
+    opencc_config: s2t.json # 👈 這是最穩定的簡轉繁字典
+    option_name: simplification

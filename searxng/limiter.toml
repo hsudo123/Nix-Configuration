@@ -1,0 +1,22 @@
+[botdetection]
+ipv4_prefix = 24
+ipv6_prefix = 36
+
+# 告訴系統：信任來自本地的請求
+trusted_proxies = [
+  '127.0.0.0/8',
+  '::1'
+]
+
+[botdetection.ip_limit]
+filter_link_local = true  # 啟動本地內網免除監控
+link_token = false
+
+[botdetection.ip_lists]
+block_ip = []
+# 🎯 關鍵：把本機的 IPv4 和 IPv6 丟進白名單，直接繞過所有 Bot 檢查
+pass_ip = [
+  '127.0.0.0/27',
+  '::1'
+]
+pass_searxng_org = false
