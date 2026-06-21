@@ -42,11 +42,11 @@
             casks = [
                 "mos"
                 "stats"
+                "rectangle"
                 "vivaldi"
                 "discord"
-                "rectangle"
+                "libreoffice"
                 "prismlauncher"
-                "microsoft-office"
             ];
             masApps = {
                 "WireGuard" = 1451685025;
