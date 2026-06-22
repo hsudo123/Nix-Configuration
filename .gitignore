@@ -1,3 +1,4 @@
 *.log
 *.db*
 .update_check
+.DS_Store
