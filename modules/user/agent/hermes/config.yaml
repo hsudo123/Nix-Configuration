@@ -31,7 +31,7 @@ terminal:
   modal_mode: auto
   cwd: .
   timeout: 180
-  daemon_term_grace_seconds: 2.0
+  daemon_term_grace_seconds: 2
   env_passthrough: []
   home_mode: auto
   shell_init_files: []
@@ -264,7 +264,7 @@ display:
   skin: default
   language: en
   tui_status_indicator: kaomoji
-  cli_refresh_interval: 1.0
+  cli_refresh_interval: 1
   user_message_preview:
     first_lines: 2
     last_lines: 2
@@ -288,7 +288,7 @@ display:
   copy_shortcut: auto
   tool_progress: all
 dashboard:
-  theme: default
+  theme: mono
   show_token_analytics: false
   oauth:
     client_id: ''
@@ -353,7 +353,7 @@ voice:
   auto_tts: false
   beep_enabled: true
   silence_threshold: 200
-  silence_duration: 3.0
+  silence_duration: 3
 human_delay:
   mode: 'off'
   min_ms: 800
@@ -430,7 +430,7 @@ discord:
     ambient_path: ''
     ambient_gain: 0.18
     duck_gain: 0.06
-    speech_gain: 1.0
+    speech_gain: 1
     ack_enabled: true
     ack_phrases:
     - Let me look into that.
@@ -523,7 +523,7 @@ streaming:
   edit_interval: 0.8
   buffer_threshold: 24
   cursor: " \u2589"
-  fresh_final_after_seconds: 0.0
+  fresh_final_after_seconds: 0
 sessions:
   auto_prune: false
   retention_days: 90
@@ -540,7 +540,7 @@ updates:
 lsp:
   enabled: true
   wait_mode: document
-  wait_timeout: 5.0
+  wait_timeout: 5
   install_strategy: auto
   servers: {}
 x_search:
@@ -559,7 +559,6 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
-_config_version: 30
 session_reset:
   mode: none
 custom_providers:

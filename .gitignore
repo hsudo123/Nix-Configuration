@@ -1,5 +1,6 @@
 *.log
 *.db*
+*.hermes_history
 .update_check
 .DS_Store
 **/.DS_Store

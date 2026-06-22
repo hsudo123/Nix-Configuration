@@ -137,42 +137,42 @@
 },
 "z-ai/glm-5.2":{
 "context_length":1048576,
-"max_completion_tokens":32768,
+"max_completion_tokens":null,
 "name":"Z.ai: GLM 5.2",
 "pricing":{
-"prompt":"0.000001",
-"completion":"0.000004",
-"input_cache_read":"0.00000018"
+"prompt":"0.00000098",
+"completion":"0.00000308",
+"input_cache_read":"0.000000182"
 }
 },
 "glm-5.2":{
 "context_length":1048576,
-"max_completion_tokens":32768,
+"max_completion_tokens":null,
 "name":"Z.ai: GLM 5.2",
 "pricing":{
-"prompt":"0.000001",
-"completion":"0.000004",
-"input_cache_read":"0.00000018"
+"prompt":"0.00000098",
+"completion":"0.00000308",
+"input_cache_read":"0.000000182"
 }
 },
 "z-ai/glm-5.2-20260616":{
 "context_length":1048576,
-"max_completion_tokens":32768,
+"max_completion_tokens":null,
 "name":"Z.ai: GLM 5.2",
 "pricing":{
-"prompt":"0.000001",
-"completion":"0.000004",
-"input_cache_read":"0.00000018"
+"prompt":"0.00000098",
+"completion":"0.00000308",
+"input_cache_read":"0.000000182"
 }
 },
 "glm-5.2-20260616":{
 "context_length":1048576,
-"max_completion_tokens":32768,
+"max_completion_tokens":null,
 "name":"Z.ai: GLM 5.2",
 "pricing":{
-"prompt":"0.000001",
-"completion":"0.000004",
-"input_cache_read":"0.00000018"
+"prompt":"0.00000098",
+"completion":"0.00000308",
+"input_cache_read":"0.000000182"
 }
 },
 "openrouter/fusion":{
@@ -2401,6 +2401,46 @@
 "prompt":"0.000000325",
 "completion":"0.00000195",
 "input_cache_write":"0.00000040625"
+}
+},
+"z-ai/glm-5v-turbo":{
+"context_length":202752,
+"max_completion_tokens":131072,
+"name":"Z.ai: GLM 5V Turbo",
+"pricing":{
+"prompt":"0.0000012",
+"completion":"0.000004",
+"input_cache_read":"0.00000024"
+}
+},
+"glm-5v-turbo":{
+"context_length":202752,
+"max_completion_tokens":131072,
+"name":"Z.ai: GLM 5V Turbo",
+"pricing":{
+"prompt":"0.0000012",
+"completion":"0.000004",
+"input_cache_read":"0.00000024"
+}
+},
+"z-ai/glm-5v-turbo-20260401":{
+"context_length":202752,
+"max_completion_tokens":131072,
+"name":"Z.ai: GLM 5V Turbo",
+"pricing":{
+"prompt":"0.0000012",
+"completion":"0.000004",
+"input_cache_read":"0.00000024"
+}
+},
+"glm-5v-turbo-20260401":{
+"context_length":202752,
+"max_completion_tokens":131072,
+"name":"Z.ai: GLM 5V Turbo",
+"pricing":{
+"prompt":"0.0000012",
+"completion":"0.000004",
+"input_cache_read":"0.00000024"
 }
 },
 "arcee-ai/trinity-large-thinking":{
