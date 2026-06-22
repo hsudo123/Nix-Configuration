@@ -2,9 +2,13 @@
 
 {
     flake.modules.homeManager.darwin = {
+        imports = [
+            inputs.mac-app-util.homeManagerModules.default
+        ];
         home.username = "hanyu";
 	    home.homeDirectory = "/Users/hanyu";
         home.stateVersion = "26.05";
+        programs.home-manager.enable = true;
 
         # 🎯 設定 1：主設定檔，將小鶴雙拼設為唯一/預設方案
         home.file."Library/Rime/default.custom.yaml".source = ./double_pinyin/default.custom.yaml;

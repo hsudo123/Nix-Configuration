@@ -2,7 +2,9 @@
 
 {
     flake.modules.homeManager.IDE = { config, pkgs, ... }: let 
-        continue_config = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/sysconfig/modules/user/IDE/continue/continue.yml";
+        IDE_prefix = "${config.home.homeDirectory}/sysconfig/modules/user/IDE";
+        continue_config = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/continue/continue.yml";
+        template = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/template/template.txt";
     in {
         programs.vscode = {
             enable = true;
@@ -26,5 +28,6 @@
             ];
         };
         home.file.".continue/config.yaml".source = continue_config;
+        home.file."Library/Application Support/Code/User/snippets/template.code-snippets".source = template;
     };
 }

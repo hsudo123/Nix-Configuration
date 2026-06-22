@@ -10,9 +10,6 @@
             ai
             search
             packages
-        ] ++ [
-            inputs.mac-app-util.darwinModules.default
-            { nixpkgs.hostPlatform = "aarch64-darwin"; }
         ];
     };
 
@@ -27,8 +24,6 @@
             shell
             IDE
             packages
-        ] ++ [
-            inputs.mac-app-util.homeManagerModules.default
         ];
     };
 }

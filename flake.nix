@@ -14,6 +14,8 @@
 		import-tree.url = "github:vic/import-tree";
 
 		mac-app-util.url = "github:hraban/mac-app-util";
+
+		hermes-agent.url = "github:NousResearch/hermes-agent";
     };
 
 	outputs = inputs@{ 

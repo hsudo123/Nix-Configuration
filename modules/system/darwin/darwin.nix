@@ -2,8 +2,12 @@
 
 {
     flake.modules.darwin.darwin = {
-        system.stateVersion = 6;
+        imports = [
+            inputs.mac-app-util.darwinModules.default
+        ];
 
+        nixpkgs.hostPlatform = "aarch64-darwin";
+        system.stateVersion = 6;
         system.primaryUser = "hanyu";
 
         security.pam.services.sudo_local.touchIdAuth = true;
