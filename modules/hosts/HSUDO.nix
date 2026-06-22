@@ -24,6 +24,7 @@
             shell
             IDE
             packages
+            agent
         ];
     };
 }
