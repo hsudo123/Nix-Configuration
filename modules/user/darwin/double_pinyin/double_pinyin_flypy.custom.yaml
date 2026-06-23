@@ -7,5 +7,5 @@ patch:
   
   # 將簡轉繁濾鏡掛載到選單渲染管道中
   simplifier:
-    opencc_config: s2t.json # 👈 這是最穩定的簡轉繁字典
-    option_name: simplification
+    opencc_config: t2tw.json
+    option_name: zh_tw

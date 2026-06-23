@@ -1,0 +1,1 @@
+當被要求查看任何系統層級配置 (System-level configuration) 時，文件搜尋應限定在 ~/sysconfig 下方，並排除 ~/sysconfig/modules/user/agent/hermes 及其子目錄。如果查詢的是本 Agent (Hermes Agent) 的特定功能或設定，則例外允許查閱該目錄下的文件。

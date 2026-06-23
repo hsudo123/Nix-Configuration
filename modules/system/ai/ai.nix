@@ -16,6 +16,7 @@
         };
 
         environment.variables = ENV_VAR;
+        launchd.user.envVariables = ENV_VAR;
         launchd.user.agents.ollama-service = {
             serviceConfig = {
                 ProgramArguments = [ "/Applications/Ollama.app/Contents/Resources/ollama" "serve" ];
