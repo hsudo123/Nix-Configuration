@@ -39,16 +39,25 @@ engines:
     engine : google
     disabled: false
     categories: general
+    weight: 1
+
+  - name : google english
+    engine : google
+    language : en
+    categories: general
+    disabled: false
 
   - name: duckduckgo
     engine: duckduckgo
     disabled: false
     categories: general
+    weight: 0.5
 
   - name: bing
     engine: bing
     disabled: false
     categories: general
+    weight: 0.5
 
   - name: google images
     engine: google_images
@@ -69,6 +78,58 @@ engines:
   
   - name: startpage
     engine: startpage
+    disabled: true
+  
+  - name: qwant images
+    engine: qwant
+    disabled: true
+  
+  - name: qwant videos
+    engine: qwant
+    disabled: true
+  
+  - name: artic
+    engine: artic
+    disabled: true
+  
+  - name: deviantart
+    engine: deviantart
+    disabled: true
+  
+  - name: devicons
+    engine: devicons
+    disabled: true
+  
+  - name: flickr
+    engine: flickr
+    disabled: true
+  
+  - name: lucide
+    engine: lucide
+    disabled: true
+  
+  - name: openverse
+    engine: openverse
+    disabled: true
+  
+  - name: pexels
+    engine: pexels
+    disabled: true
+  
+  - name: pinterest
+    engine: pinterest
+    disabled: true
+  
+  - name: unsplash
+    engine: unsplash
+    disabled: true
+  
+  - name: wikicommons.images
+    engine: wikicommons
+    disabled: true
+  
+  - name: nixos wiki
+    engine: wikicommons
     disabled: true
   
   - name: torch

@@ -18,14 +18,7 @@
 		hermes-agent.url = "github:NousResearch/hermes-agent";
     };
 
-	outputs = inputs@{ 
-		self, 
-		nixpkgs, 
-		nix-darwin, 
-		home-manager, 
-		mac-app-util, 
-		... 
-	}: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+	outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
 		imports = [
 			inputs.flake-parts.flakeModules.modules
 			(inputs.import-tree ./modules)

@@ -1,9 +1,4 @@
 *.log
-*.db*
-*.hermes_history
-*cache
-*dump*
-.update_check
 .DS_Store
 **/.DS_Store
 .DS_Store?

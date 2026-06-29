@@ -1,0 +1,5 @@
+.update_check
+*.hermes_history
+*cache
+*dump*
+*.db*
