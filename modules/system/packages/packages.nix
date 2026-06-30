@@ -44,6 +44,7 @@
                 "stats"
                 "rectangle"
                 "vivaldi"
+                "helium-browser"
                 "discord"
                 "libreoffice"
                 "prismlauncher"

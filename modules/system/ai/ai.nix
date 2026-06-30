@@ -11,7 +11,6 @@
         homebrew = {
             casks = [
                 "ollama-app"
-                "anythingllm"
             ];
         };
 
