@@ -52,6 +52,7 @@
                 ShowMountedServersOnDesktop = false;
                 ShowRemovableMediaOnDesktop = true;
                 _FXSortFoldersFirst = true;
+                _FXEnableColumnAutoSizing = true;
 
                 # When performing a search, search the current folder by default
                 FXDefaultSearchScope = "SCcf";
@@ -62,13 +63,14 @@
             };
             
             dock = {
+                tilesize = 64;
                 autohide = false;
                 autohide-delay = 1.5;
                 launchanim = false;
                 static-only = false;
                 show-process-indicators = true;
 
-                wvous-bl-corner = 1;
+                wvous-bl-corner = 4;
                 wvous-br-corner = 1;
                 wvous-tl-corner = 1;
                 wvous-tr-corner = 1;
