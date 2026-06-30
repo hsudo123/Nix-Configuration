@@ -48,15 +48,9 @@
             enableCompletion = true;
             autosuggestion.enable = true;
             syntaxHighlighting.enable = true;
-            initExtra = ''
-                # 🌟 同步在使用者互動層綁定，徹底根除 Starship 箭頭計算導致的殘影
+            envExtra = ''
                 export LANG="zh_TW.UTF-8"
                 export LC_ALL="zh_TW.UTF-8"
-
-                bindkey '^?' backward-delete-char
-                ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(expand-or-complete)
-            '';
-            envExtra = ''
                 # 載入 Apple Silicon Mac 的 Homebrew 環境變數
                 if [ -f "/opt/homebrew/bin/brew" ]; then
                     eval "$(/opt/homebrew/bin/brew shellenv)"

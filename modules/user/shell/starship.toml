@@ -14,8 +14,7 @@ $time\
 [](fg:#a3aed2 bg:#1d2230)\
 $os\
 $line_break\
-$character
-"""
+$character"""
 
 [username]
 style_user = "bg:#a3aed2 fg:#090c0c"
@@ -52,12 +51,12 @@ format = '[[ $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [os]
 style = "bg:#a3aed2 fg:#090c0c"
-format = "[( $name $version )]($style)"
+format = "[ $name $version ]($style)"
 disabled = false
 
 [line_break]
 disabled = false
 
 [character]
-success_symbol = "[❯](bold green) "
-error_symbol = "[❯](bold red) "
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
