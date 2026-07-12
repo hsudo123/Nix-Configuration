@@ -43,7 +43,6 @@
                 "mos"
                 "stats"
                 "rectangle"
-                "vivaldi"
                 "helium-browser"
                 "discord"
                 "libreoffice"
