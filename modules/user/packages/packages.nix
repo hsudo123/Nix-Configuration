@@ -29,7 +29,7 @@
         };
     in {
         home.packages = with pkgs;[
-            n8n
+            # n8n
             obsidian
             ffmpeg
             freetube
