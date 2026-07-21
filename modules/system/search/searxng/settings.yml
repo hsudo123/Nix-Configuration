@@ -37,9 +37,9 @@ search:
 engines:
   - name : google
     engine : google
-    disabled: false
     categories: general
     weight: 1
+    disabled: false
 
   - name : google english
     engine : google
@@ -49,24 +49,37 @@ engines:
 
   - name: duckduckgo
     engine: duckduckgo
-    disabled: false
     categories: general
     weight: 0.5
+    disabled: false
+  
+  - name: duckduckgo web
+    engine: duckduckgo_web
+    categories: general
+    weight: 0.5
+    disabled: false
 
   - name: bing
     engine: bing
-    disabled: false
     categories: general
     weight: 0.5
+    disabled: false
 
   - name: google images
     engine: google_images
-    disabled: false
     categories: images
+    disabled: false
 
   - name: brave
     engine: brave
-    disabled: true
+    disabled: false
+  
+  - name: qwant
+    engine: qwant
+    categories: general
+    weight: 0.5
+    timeout: 1.0
+    disabled: false
 
   - name: wikidata
     engine: wikidata
