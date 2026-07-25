@@ -125,11 +125,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1784660687,
-        "narHash": "sha256-DzGCE8VPUxycceSnkKfpj0BvWAtrvfSaTfF/e7zpEdk=",
+        "lastModified": 1784666001,
+        "narHash": "sha256-wek7P9tdrqRk/ArxBXt/X3BJpQ+wcnKFqG0S+ryx5p0=",
         "owner": "NousResearch",
         "repo": "hermes-agent",
-        "rev": "9cc475cc5881133aef7bc621d2f7a365a8fe1f01",
+        "rev": "413ed6b9df18f22152d26b6de4093280dcb2b16b",
         "type": "github"
       },
       "original": {
@@ -214,6 +214,24 @@
         "owner": "nix-darwin",
         "ref": "master",
         "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nix-vscode-extensions": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1784603886,
+        "narHash": "sha256-AwdtZq1mpXZCfn+C2NOBTO7i0H4eGIj6dH9XXkO3Kus=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "3bc93178a45e4327bdcf91f2c9158701937abdf3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
         "type": "github"
       }
     },
@@ -329,6 +347,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1777207419,
+        "narHash": "sha256-V3bmPWAajDiC+1ClDOp55gianW2EyRJSJOyu1RUQibc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a7ecea3deccfbdbf22945a89984fcc5a169da8aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a7ecea3deccfbdbf22945a89984fcc5a169da8aa",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1784555310,
         "narHash": "sha256-/FCliTPgiuV1owejZFNx3Ch9irdvkOfOFl+HHZ+DrtM=",
         "owner": "NixOS",
@@ -422,7 +456,8 @@
         "import-tree": "import-tree",
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs_6"
+        "nix-vscode-extensions": "nix-vscode-extensions",
+        "nixpkgs": "nixpkgs_7"
       }
     },
     "systems": {

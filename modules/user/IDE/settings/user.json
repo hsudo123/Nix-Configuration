@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.semanticHighlighting.enabled": true,
+    "continue.enableTabAutocomplete": false,
+    
+    "clangd.path": "clangd",
+    "C_Cpp.default.compilerPath": "g++",
+
+    "python.defaultInterpreterPath": "python",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": []
+}

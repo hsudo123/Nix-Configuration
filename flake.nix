@@ -14,8 +14,8 @@
 		import-tree.url = "github:vic/import-tree";
 
 		mac-app-util.url = "github:hraban/mac-app-util";
-
 		hermes-agent.url = "github:NousResearch/hermes-agent";
+		nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     };
 
 	outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
