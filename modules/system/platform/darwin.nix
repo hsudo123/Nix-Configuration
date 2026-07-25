@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-    flake.modules.darwin.darwin = {
+    flake.modules.darwin.platform = {
         imports = [
             inputs.mac-app-util.darwinModules.default
         ];

@@ -1,14 +1,14 @@
 { inputs, self, ...}:
 
 {
-    flake.modules.nixos.hardware = { pkgs, ... }: {
+    flake.modules.nixos.hardware = { pkgs, lib, config, modulesPath, ... }: {
         imports = [
             (modulesPath + "/installer/scan/not-detected.nix")
         ];
 
         boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
         boot.initrd.kernelModules = [ ];
-        boot.kernelModules = [ "kvm-intel" ];
+        boot.kernelModules = [ "kvm-intel" "nvidia" ];
         boot.extraModulePackages = [ ];
 
         fileSystems."/" = {
@@ -38,35 +38,35 @@
             device = "/dev/disk/by-uuid/ad63b6fd-53f6-4838-a0b2-8774e8ed0fd4";
         }];
 
-        nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+        # nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
         hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     };
 
-    flake.nixosConfigurations."HANIX" = inputs.nix-darwin.lib.darwinSystem {
+    flake.nixosConfigurations."HANIX" = inputs.nixpkgs.lib.nixosSystem {
         modules = with self.modules.nixos; [
-            nix
-            darwin
-            shell
-            locale
-            hardware
-            ai
-            search
-            packages
+            # nix
+            # darwin
+            # shell
+            # locale
+            # hardware
+            # ai
+            # search
+            # packages
         ];
     };
 
-    flake.homeConfigurations."hanyu" = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = import inputs.nixpkgs {
-            system = "aarch64-darwin"; # 依你的硬體平台而定
-            config.allowUnfree = true;  # ✨ 允許閉源軟體
-        };
+    # flake.homeConfigurations."hanyu-nixos" = inputs.home-manager.lib.homeManagerConfiguration {
+    #     pkgs = import inputs.nixpkgs {
+    #         system = "x86_64-linux"; # 依你的硬體平台而定
+    #         config.allowUnfree = true;  # ✨ 允許閉源軟體
+    #     };
 
-        modules = with self.modules.homeManager; [
-            darwin
-            shell
-            IDE
-            packages
-            agent
-        ];
-    };
+    #     modules = with self.modules.homeManager; [
+    #         darwin
+    #         shell
+    #         IDE
+    #         packages
+    #         agent
+    #     ];
+    # };
 }

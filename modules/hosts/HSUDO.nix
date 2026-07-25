@@ -4,7 +4,7 @@
     flake.darwinConfigurations."HSUDO" = inputs.nix-darwin.lib.darwinSystem {
         modules = with self.modules.darwin; [
             nix
-            darwin
+            platform
             shell
             locale
             ai
