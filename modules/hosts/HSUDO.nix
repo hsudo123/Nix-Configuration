@@ -36,6 +36,7 @@
             };
 
             modules = with self.modules.homeManager; [
+                linux
                 shell
                 IDE
                 packages
