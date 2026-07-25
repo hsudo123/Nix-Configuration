@@ -16,6 +16,7 @@
         lang = "zh_TW.UTF-8";
     in {
         programs.zsh.enable = true;
+        users.defaultUserShell = pkgs.zsh;
 
         environment.variables = {
             LANG = lang;
