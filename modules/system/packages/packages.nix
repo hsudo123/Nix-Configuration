@@ -18,6 +18,8 @@
             
             # 網路排查
             nmap
+
+            git
         ];
     };
     
@@ -89,5 +91,13 @@
                 "KDE Connect" = 1580245991;
             };
         };
+    };
+
+    flake.modules.nixos.packages = { pkgs, config, ... }: {
+        imports = [
+            inputs.self.modules.generic.packages
+        ];
+
+        programs.firefox.enable = true;
     };
 }

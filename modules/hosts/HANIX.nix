@@ -38,20 +38,30 @@
             device = "/dev/disk/by-uuid/ad63b6fd-53f6-4838-a0b2-8774e8ed0fd4";
         }];
 
-        # nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+        nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
         hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+        # GTX 1050 uses the proprietary driver stack
+        hardware.nvidia.open = false;
+        hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+        hardware.nvidia.prime = {
+            # REPLACE THESE WITH THE BUS IDs YOU FOUND IN STEP 1
+            intelBusId = "PCI:0:2:0"; # (or amdgpuBusId if your CPU is AMD)
+            nvidiaBusId = "PCI:1:0:0";
+        };
     };
 
     flake.nixosConfigurations."HANIX" = inputs.nixpkgs.lib.nixosSystem {
         modules = with self.modules.nixos; [
-            # nix
-            # darwin
-            # shell
-            # locale
-            # hardware
+            nix
+            platform
+            shell
+            locale
+            hardware
             # ai
             # search
-            # packages
+            packages
+            network
+            nvidia
         ];
     };
 
