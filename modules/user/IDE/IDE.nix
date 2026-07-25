@@ -6,6 +6,7 @@
         continue_config = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/continue/continue.yml";
         user = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/settings/user.json";
         template = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/settings/template.txt";
+        vscodiumUserDir = if pkgs.stdenv.isDarwin then "Library/Application Support/VSCodium/User" else ".config/VSCodium/User";
     in {
         nixpkgs.overlays = [
             inputs.nix-vscode-extensions.overlays.default
@@ -42,7 +43,7 @@
             ];
         };
         home.file.".continue/config.yaml".source = continue_config;
-        home.file."Library/Application Support/VSCodium/User/settings.json".source = user;
-        home.file."Library/Application Support/VSCodium/User/snippets/template.code-snippets".source = template;
+        home.file."${vscodiumUserDir}/settings.json".source = user;
+        home.file."${vscodiumUserDir}/snippets/template.code-snippets".source = template;
     };
 }

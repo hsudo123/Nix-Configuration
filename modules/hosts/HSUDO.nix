@@ -13,18 +13,33 @@
         ];
     };
 
-    flake.homeConfigurations."hanyu" = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = import inputs.nixpkgs {
-            system = "aarch64-darwin"; # 依你的硬體平台而定
-            config.allowUnfree = true;  # ✨ 允許閉源軟體
+    flake.homeConfigurations = {
+        "hanyu@HSUDO" = inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = import inputs.nixpkgs {
+                system = "aarch64-darwin";
+                config.allowUnfree = true;
+            };
+
+            modules = with self.modules.homeManager; [
+                darwin
+                shell
+                IDE
+                packages
+                agent
+            ];
         };
 
-        modules = with self.modules.homeManager; [
-            darwin
-            shell
-            IDE
-            packages
-            agent
-        ];
+        "hanyu@HANIX" = inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = import inputs.nixpkgs {
+                system = "x86_64-linux";
+                config.allowUnfree = true;
+            };
+
+            modules = with self.modules.homeManager; [
+                shell
+                IDE
+                packages
+            ];
+        };
     };
 }

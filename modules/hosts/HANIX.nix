@@ -65,7 +65,7 @@
         ];
     };
 
-    # flake.homeConfigurations."hanyu-nixos" = inputs.home-manager.lib.homeManagerConfiguration {
+    # flake.homeConfigurations."hanyu@HANIX" = inputs.home-manager.lib.homeManagerConfiguration {
     #     pkgs = import inputs.nixpkgs {
     #         system = "x86_64-linux"; # 依你的硬體平台而定
     #         config.allowUnfree = true;  # ✨ 允許閉源軟體
