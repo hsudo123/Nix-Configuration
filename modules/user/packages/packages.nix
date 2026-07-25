@@ -7,6 +7,11 @@
             obsidian
             ffmpeg
             freetube
+        ]
+        ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+            discord
+            libreoffice
+            prismlauncher
         ];
 
         home.file.".config/java/java17".source = pkgs.zulu17;

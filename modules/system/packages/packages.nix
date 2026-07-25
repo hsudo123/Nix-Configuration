@@ -98,6 +98,10 @@
             inputs.self.modules.generic.packages
         ];
 
+        environment.systemPackages = with pkgs; [
+            kdePackages.kdeconnect-kde
+        ];
+
         programs.firefox.enable = true;
     };
 }
