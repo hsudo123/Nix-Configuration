@@ -81,6 +81,7 @@
                 "mos"
                 "stats"
                 "rectangle"
+                "openmtp"
                 "helium-browser"
                 "discord"
                 "libreoffice"
