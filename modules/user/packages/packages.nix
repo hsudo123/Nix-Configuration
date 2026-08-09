@@ -32,6 +32,7 @@
             # n8n
             obsidian
             ffmpeg
+            localsend
             # freetube
         ]
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
