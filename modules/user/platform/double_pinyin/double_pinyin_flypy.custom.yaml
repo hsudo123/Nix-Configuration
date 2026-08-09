@@ -9,3 +9,6 @@ patch:
   simplifier:
     opencc_config: t2tw.json
     option_name: zh_tw
+
+  patch:
+    __include: grammar:/hant
