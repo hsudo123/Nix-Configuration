@@ -37,7 +37,7 @@
         user = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/settings/user.json";
         template = config.lib.file.mkOutOfStoreSymlink "${IDE_prefix}/settings/template.txt";
 
-        vscodiumUserDir = if pkgs.stdenv.isDarwin then "Library/Application Support/VSCodium/User" else ".config/VSCodium/User";
+        vscodiumUserDir = if pkgs.stdenv.hostPlatform.isDarwin then "Library/Application Support/VSCodium/User" else ".config/VSCodium/User";
     in {
         nixpkgs.overlays = [
             inputs.nix-vscode-extensions.overlays.default
