@@ -68,6 +68,7 @@
                 autohide-delay = 1.5;
                 launchanim = false;
                 static-only = false;
+                show-recents = false;
                 show-process-indicators = true;
 
                 wvous-bl-corner = 4;
