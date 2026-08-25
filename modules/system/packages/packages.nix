@@ -11,7 +11,7 @@
             age
             btop
             tree
-            tmux
+            # tmux
             wget
             zstd
             pciutils # macOS/Linux 通用的 lspci 基礎包
