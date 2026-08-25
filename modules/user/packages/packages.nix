@@ -27,12 +27,44 @@
                 cp -r JHenTai.app $out/Applications/
             '';
         };
+        ProtonPass = pkgs.stdenvNoCC.mkDerivation rec {
+            pname = "ProtonPass";
+            version = "1.0.0";
+
+            src = pkgs.fetchurl {
+                url = "https://proton.me/download/PassDesktop/darwin/universal/ProtonPass.dmg";
+                sha256 = "sha256-P74rCM45QTsj+xhRmD8upCHaiqUb5PlME/+ZFjY9+aQ="; 
+            };
+
+            nativeBuildInputs = with pkgs; [
+                undmg
+                darwin.sigtool
+            ];
+
+            unpackPhase = ''
+                # 1. 建立一個絕對唯一的乾淨工作目錄
+                mkdir source
+                cd source
+
+                # 2. 手動將 dmg 解壓到當前這個「唯一」的 source 目錄中
+                undmg $src
+            '';
+
+            installPhase = ''
+                mkdir -p $out/Applications
+                cp -r "Proton Pass.app" $out/Applications/
+            '';
+        };
     in {
         home.packages = with pkgs;[
             # n8n
             obsidian
             ffmpeg
             localsend
+            yt-dlp
+            proton-pass
+            proton-authenticator
+
             # freetube
         ]
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
@@ -42,6 +74,7 @@
         ]
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") [
             JViewer
+            # ProtonPass
         ];
 
         home.file.".config/java/java17".source = pkgs.zulu17;
