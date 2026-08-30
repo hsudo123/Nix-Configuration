@@ -79,7 +79,7 @@ engines:
     categories: general
     weight: 0.5
     timeout: 1.0
-    disabled: false
+    disabled: true
 
   - name: wikidata
     engine: wikidata
