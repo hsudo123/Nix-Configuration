@@ -3,3 +3,6 @@
 *cache
 *dump*
 *.db*
+bin
+node
+cron

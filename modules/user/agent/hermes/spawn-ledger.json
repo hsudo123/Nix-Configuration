@@ -1,0 +1,15 @@
+[
+  {
+    "pid": 49799,
+    "create_time": 1788115356.071703,
+    "purpose": "serve",
+    "install": "49defec3de98",
+    "spawner_pid": 49728,
+    "spawner_create": null,
+    "registered_at": 1788115359.267217,
+    "argv": "/Users/hanyu/.hermes/hermes-agent/hermes_cli/main.py serve --host 127.0.0.1 --port 0",
+    "host": "127.0.0.1",
+    "port": 53685,
+    "profile": ""
+  }
+]

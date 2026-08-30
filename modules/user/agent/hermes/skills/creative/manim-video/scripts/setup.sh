@@ -1,4 +1,4 @@
-#!/nix/store/s0psayl7zvkvwdcqc8fy1sbv8rlf1yq8-bash-5.3p9/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 G="\033[0;32m"; R="\033[0;31m"; N="\033[0m"
 ok() { echo -e "  ${G}+${N} $1"; }

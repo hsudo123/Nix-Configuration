@@ -1,4 +1,4 @@
-#!/nix/store/s0psayl7zvkvwdcqc8fy1sbv8rlf1yq8-bash-5.3p9/bin/bash
+#!/bin/bash
 # p5.js Skill — Dependency Verification
 # Run: bash skills/creative/p5js/scripts/setup.sh
 

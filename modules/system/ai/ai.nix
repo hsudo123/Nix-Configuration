@@ -11,6 +11,7 @@
         homebrew = {
             casks = [
                 "ollama-app"
+                "hermes-desktop"
             ];
         };
 
