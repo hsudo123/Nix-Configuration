@@ -1,9 +1,0 @@
-.update_check
-*.hermes_history
-*cache
-*dump*
-*.db*
-bin
-node
-cron
-hermes-agent
