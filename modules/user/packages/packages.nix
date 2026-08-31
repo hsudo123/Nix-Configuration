@@ -58,8 +58,9 @@
     in {
         home.packages = with pkgs;[
             # n8n
-            obsidian
             ffmpeg
+            rar
+            obsidian
             localsend
             yt-dlp
             proton-pass

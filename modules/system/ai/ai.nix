@@ -3,15 +3,15 @@
 {
     flake.modules.darwin.ai = let
         ENV_VAR = {
-            OLLAMA_MODELS = "/Volumes/CrucialX6/ollama";
-            OLLAMA_KEEP_ALIVE = "1m";
+            # OLLAMA_MODELS = "/Volumes/CrucialX6/ollama";
+            OLLAMA_KEEP_ALIVE = "10m";
             OLLAMA_FLASH_ATTENTION = "1";
         };
     in {
         homebrew = {
             casks = [
                 "ollama-app"
-                "hermes-desktop"
+                # "hermes-desktop"
             ];
         };
 

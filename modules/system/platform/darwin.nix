@@ -47,6 +47,7 @@
 
             finder = {
                 FXPreferredViewStyle = "Nlsv";
+                AppleShowAllFiles = true;
                 ShowExternalHardDrivesOnDesktop = true;
                 ShowHardDrivesOnDesktop = false;
                 ShowMountedServersOnDesktop = false;
