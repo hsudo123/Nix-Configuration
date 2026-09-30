@@ -6,9 +6,10 @@
             ms-ceintl.vscode-language-pack-zh-hant
             # ms-vscode-remote.remote-ssh
             christian-kohler.path-intellisense
-            mkhl.direnv
             hediet.vscode-drawio
             pkief.material-icon-theme
+
+            # ai
             continue.continue
 
             # markdown
@@ -16,7 +17,9 @@
             shd101wyy.markdown-preview-enhanced
 
             # nix
-            bbenoist.nix
+            mkhl.direnv
+            jnoortheen.nix-ide
+            arrterian.nix-env-selector
 
             # c/c++
             ms-vscode.cpptools-extension-pack
@@ -26,9 +29,10 @@
             ms-python.python
             ms-toolsai.jupyter
         ];
-        thirdparty_extension = with pkgs; [
-            open-vsx.jeanp413.open-remote-ssh
-            open-vsx.detachhead.basedpyright
+        thirdparty_extension = with pkgs.open-vsx; [
+            jeanp413.open-remote-ssh
+            detachhead.basedpyright
+            formulahendry.acp-client
         ];
 
         IDE_prefix = "${config.home.homeDirectory}/sysconfig/modules/user/IDE";
@@ -51,5 +55,18 @@
         home.file.".continue/config.yaml".source = continue_config;
         home.file."${vscodiumUserDir}/settings.json".source = user;
         home.file."${vscodiumUserDir}/snippets/template.code-snippets".source = template;
+
+        programs.zed-editor = {
+            enable = true;
+            extensions = [
+                "vscode-dark-modern"
+                "material-icon-theme"
+                "path-server"
+                "toml"
+                "html"
+
+                "nix"
+            ];
+        };
     };
 }

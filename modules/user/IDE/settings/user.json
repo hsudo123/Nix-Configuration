@@ -11,5 +11,63 @@
     "python.defaultInterpreterPath": "python",
     "python.analysis.autoSearchPaths": true,
     "python.analysis.extraPaths": [],
-    "basedpyright.analysis.typeCheckingMode": "standard"
+    "basedpyright.analysis.typeCheckingMode": "standard",
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    "acp.agents": {
+        "GitHub Copilot": {
+            "command": "npx",
+            "args": [
+                "@github/copilot-language-server@latest",
+                "--acp"
+            ],
+            "env": {}
+        },
+        "Claude Code": {
+            "command": "npx",
+            "args": [
+                "@agentclientprotocol/claude-agent-acp@latest"
+            ],
+            "env": {}
+        },
+        "Gemini CLI": {
+            "command": "npx",
+            "args": [
+                "@google/gemini-cli@latest",
+                "--experimental-acp"
+            ],
+            "env": {}
+        },
+        "Codex CLI": {
+            "command": "npx",
+            "args": [
+                "@zed-industries/codex-acp@latest"
+            ],
+            "env": {}
+        },
+        "OpenCode": {
+            "command": "npx",
+            "args": [
+                "opencode-ai@latest",
+                "acp"
+            ],
+            "env": {}
+        },
+        "OpenClaw": {
+            "command": "npx",
+            "args": [
+                "openclaw",
+                "acp"
+            ],
+            "env": {}
+        },
+        "Hermes Agent": {
+            "command": "hermes",
+            "args": [
+                "acp"
+            ],
+            "env": {}
+        }
+    },
+    "continue.enableNextEdit": true
 }

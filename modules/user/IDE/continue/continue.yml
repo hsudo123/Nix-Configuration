@@ -1,14 +1,17 @@
-name: Ollama
+name: oMLX
 version: 1.0.0
 schema: v1
 models:
   - name: Gemma4:e4b
-    provider: ollama
-    apiBase: http://localhost:11434
-    model: gemma4:e4b-mlx
+    provider: openai
+    apiBase: http://127.0.0.1:8000/v1
+    model: gemma-4-e4b
     roles:
       - chat
       - edit
       - apply
       - rerank
       - autocomplete
+    requestOptions:
+      extraBodyProperties:
+        think: false 
