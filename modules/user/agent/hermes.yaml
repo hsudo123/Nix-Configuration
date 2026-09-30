@@ -243,14 +243,14 @@ display:
   interface: cli
   interim_assistant_messages: true
   language: zh-hant
-  memory_notifications: 'on'
+  memory_notifications: "on"
   persist_prompts: true
   persistent_output: true
   persistent_output_max_lines: 200
   personality: ''
   platforms:
     discord:
-      streaming: false
+      streaming: true
     telegram:
       streaming: true
   reasoning_full: false
@@ -267,9 +267,9 @@ display:
       - context_pct
       - cwd
   show_cost: false
-  show_reasoning: false
+  show_reasoning: true
   skin: default
-  streaming: false
+  streaming: true
   timestamps: false
   tool_preview_length: 0
   tool_progress: all
@@ -283,6 +283,8 @@ display:
   user_message_preview:
     first_lines: 2
     last_lines: 2
+  sections:
+    thinking: expanded
 fallback_providers: []
 file_read_max_chars: 100000
 gateway:
@@ -301,7 +303,7 @@ hooks_auto_accept: false
 human_delay:
   max_ms: 2500
   min_ms: 800
-  mode: 'off'
+  mode: "off"
 kanban:
   auto_decompose: true
   auto_decompose_per_tick: 3
@@ -342,10 +344,10 @@ memory:
   user_profile_enabled: true
   write_approval: false
 model:
-  api_key: ollama
-  base_url: http://127.0.0.1:11434/v1
-  default: gemma4:e4b-mlx
-  provider: ollama-launch
+  api_key: no-key
+  base_url: http://127.0.0.1:8000/v1
+  default: gemma-4-e4b
+  provider: omlx
 model_catalog:
   enabled: true
   ttl_hours: 1
@@ -385,19 +387,13 @@ privacy:
 prompt_caching:
   cache_ttl: 5m
 providers:
-  ollama-launch:
-    api: http://127.0.0.1:11434/v1
-    default_model: gemma4:e4b-mlx
+  omlx:
+    api: http://127.0.0.1:8000/v1
+    default_model: gemma-4-e4b
     models:
-      - gemma4:e4b-mlx
-      - gemma4:12b-mlx
-      - embeddinggemma:300m
-      - gemma4:26b
-    name: Ollama
-  gemma4:e4b-mlx:
-    api: http://localhost:11434/v1
-    name: gemma4:e4b-mlx
-    default_model: gemma4:e4b-mlx
+      - gemma-4-e4b
+      - gemma-4-26B-A4B-it-QAT-MLX-4bit
+    name: oMLX
 secrets:
   bitwarden:
     access_token_env: BWS_ACCESS_TOKEN
