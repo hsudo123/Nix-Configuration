@@ -7,7 +7,6 @@
             platform
             shell
             locale
-            ai
             search
             packages
         ];

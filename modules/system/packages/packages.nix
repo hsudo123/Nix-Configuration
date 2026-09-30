@@ -14,7 +14,7 @@
             tmux
             wget
             zstd
-            pciutils # macOS/Linux 通用的 lspci 基礎包
+            pciutils
             
             # 網路排查
             nmap
@@ -54,13 +54,8 @@
                 # "FelixKratz/formulae" #sketchybar
             ];
             casks = [
-                "mos"
-                "stats"
-                "rectangle"
-                "openmtp"
                 "helium-browser"
                 "discord"
-                "libreoffice"
                 "prismlauncher"
             ];
             masApps = {
