@@ -1,0 +1,133 @@
+{
+  "version": "1.0",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "log_level": "info",
+    "cors_origins": [
+      "*"
+    ],
+    "server_aliases": [
+      "localhost",
+      "127.0.0.1",
+      "HSUDO.local",
+      "hsudo.local",
+      "192.168.1.179",
+      "192.168.1.110"
+    ],
+    "sse_keepalive_mode": "chunk",
+    "auto_start_on_launch": true,
+    "burst_decode_mode": "balanced",
+    "preserve_mid_system_cache": true,
+    "distributed_inference_enabled": false,
+    "max_audio_upload_size": "100MB"
+  },
+  "model": {
+    "model_dirs": [
+      "/Users/hanyu/.omlx/models"
+    ],
+    "model_dir": "/Users/hanyu/.omlx/models",
+    "model_fallback": true,
+    "hide_helper_models": false
+  },
+  "memory": {
+    "prefill_memory_guard": true,
+    "memory_guard_tier": "aggressive",
+    "memory_guard_custom_ceiling_gb": 18.0,
+    "soft_threshold": 0.85,
+    "hard_threshold": 0.95,
+    "prefill_safe_zone_ratio": 0.8,
+    "prefill_min_chunk_tokens": 32
+  },
+  "scheduler": {
+    "max_concurrent_requests": 8,
+    "embedding_batch_size": 32,
+    "chunked_prefill": true,
+    "prefill_priority": "context",
+    "decode_fairness": true
+  },
+  "cache": {
+    "enabled": true,
+    "hot_cache_only": false,
+    "gdn_ssd_split_enabled": true,
+    "gdn_snapshot_storage": "auto",
+    "gdn_ssd_pending_max_size": "512MB",
+    "gdn_sidecar_precision": "fp32",
+    "ssd_cache_dir": "/Users/hanyu/.omlx/cache",
+    "ssd_cache_max_size": "24GB",
+    "hot_cache_max_size": "0",
+    "hot_cache_write_through": false,
+    "ane_compile_cache": false,
+    "initial_cache_blocks": 256
+  },
+  "auth": {
+    "api_key": "sk-omlx-wNefaQCDoY3YGNz7c1eci2gK",
+    "secret_key": "d47d1f6692828e1086d5f87dda7a107fd457c99179aedfb94bf13e62f4e4fce2",
+    "skip_api_key_verification": true,
+    "sub_keys": []
+  },
+  "mcp": {
+    "config_path": null,
+    "expose_tools": true
+  },
+  "huggingface": {
+    "endpoint": "",
+    "hf_cache_enabled": true
+  },
+  "modelscope": {
+    "endpoint": ""
+  },
+  "network": {
+    "http_proxy": "",
+    "https_proxy": "",
+    "no_proxy": "",
+    "ca_bundle": ""
+  },
+  "sampling": {
+    "max_context_window": 131072,
+    "max_context_window_policy": null,
+    "max_tokens": 131072,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "repetition_penalty": 1.0
+  },
+  "logging": {
+    "log_dir": null,
+    "retention_days": 7
+  },
+  "claude_code": {
+    "mode": "cloud",
+    "opus_model": null,
+    "sonnet_model": null,
+    "haiku_model": null
+  },
+  "integrations": {
+    "codex_model": null,
+    "opencode_model": null,
+    "openclaw_model": null,
+    "hermes_model": "gemma-4-26B-A4B-it-QAT-MLX-4bit",
+    "pi_model": null,
+    "copilot_model": null,
+    "openclaw_tools_profile": "coding",
+    "markitdown_enabled": true,
+    "markitdown_expose_model": false,
+    "markitdown_max_file_size_mb": 25,
+    "markitdown_max_files_per_request": 5,
+    "markitdown_pdf_processing_engine": "markitdown",
+    "web_search_provider": "searxng",
+    "web_search_brave_api_key": "",
+    "web_search_searxng_url": "http://localhost:55688",
+    "web_search_ddgs_backends": "",
+    "web_search_max_results": 5,
+    "web_search_content_mode": "full",
+    "web_search_content_truncate": true,
+    "web_search_content_max_chars": 20000
+  },
+  "ui": {
+    "language": "zh-TW"
+  },
+  "idle_timeout": {
+    "idle_timeout_seconds": 600
+  }
+}

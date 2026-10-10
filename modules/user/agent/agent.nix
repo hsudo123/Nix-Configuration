@@ -4,11 +4,11 @@
     flake.modules.homeManager.agent = { config, pkgs, ... }: let
         omlx = pkgs.stdenvNoCC.mkDerivation rec {
             pname = "oMLX";
-            version = "0.6.4";
+            version = "0.7.0";
 
             src = pkgs.fetchurl {
                 url = "https://github.com/jundot/omlx/releases/download/v${version}/oMLX-${version}-macos26-27.dmg";
-                sha256 = "sha256-U/FQbCOF6JIKZxmLctH+CTUcGzU4vpxr3reOUnfQbZM="; 
+                sha256 = "sha256-Ljuwasbuf1CYa6FBfpCdQyzNK+Rx23UqSi07VlHjvOA="; 
             };
 
             nativeBuildInputs = [  ];
@@ -44,6 +44,7 @@
 
         config_folder = "${config.home.homeDirectory}/sysconfig/modules/user/agent";
         dotfiles = config.lib.file.mkOutOfStoreSymlink "${config_folder}/hermes";
+        omlx_config = config.lib.file.mkOutOfStoreSymlink "${config_folder}/omlx.json";
         hermes_config = config.lib.file.mkOutOfStoreSymlink "${config_folder}/hermes.yaml";
     in {
         imports = [ inputs.hermes-agent.homeManagerModules.default ];
@@ -53,7 +54,18 @@
             omlx
         ];
 
+        home.file.".omlx/settings.json".source = omlx_config;
+        home.file.".omlx/settings.json".force = true;
         home.file.".hermes".source = dotfiles;
+
+        nix.settings = {
+            extra-substituters = [
+                "https://hermes-agent.cachix.org"
+            ];
+            extra-trusted-public-keys = [
+                "hermes-agent.cachix.org-1:jN3pjR50Mxi4SESKC/FIMNM6/LCosvPk2VUwzVvebzU="
+            ];
+        };
 
         programs.hermes-agent = {
             enable = true;

@@ -17,6 +17,7 @@
             pciutils
             
             # 網路排查
+            mtr
             nmap
 
             git
@@ -55,11 +56,9 @@
             ];
             casks = [
                 "helium-browser"
-                "discord"
                 "prismlauncher"
             ];
             masApps = {
-                "WireGuard" = 1451685025;
                 "KDE Connect" = 1580245991;
             };
         };

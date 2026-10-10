@@ -4,11 +4,11 @@
     flake.modules.homeManager.packages = { pkgs, ... }: let
         JViewer = pkgs.stdenvNoCC.mkDerivation rec {
             pname = "JHenTai";
-            version = "8.0.14+323";
+            version = "8.0.16+334";
 
             src = pkgs.fetchurl {
                 url = "https://github.com/jiangtian616/JHenTai/releases/download/v${version}/JHenTai-${version}.dmg";
-                sha256 = "sha256-hqfPBveuNRQfGARnwEY0QDF/9LxDFjBhxvAuum7Q/JE="; 
+                sha256 = "sha256-lyaVjFpk0DzZ5iUJrcL3PAKelj3JGKffvQSYVDMhnJY=";
             };
 
             nativeBuildInputs = [ pkgs.undmg ];
@@ -30,11 +30,11 @@
 
         eqMac = pkgs.stdenvNoCC.mkDerivation rec {
             pname = "eqMac";
-            version = "1.9.1";
+            version = "1.9.2";
 
             src = pkgs.fetchurl {
                 url = "https://github.com/bitgapp/eqMac/releases/download/v${version}/eqMac.dmg";
-                sha256 = "sha256-ZV/rZXjN1c0Px6K5wJVbvdt71rsjsp6n+YKuNbi6XiY="; 
+                sha256 = "sha256-twrwB6Zu+14l02iuUfhRCiPh/A4BagiR89FpLK7SJsI=";
             };
 
             nativeBuildInputs = [  ];
@@ -60,18 +60,27 @@
     in {
         home.packages = with pkgs;[
             nil
+            ruff
+            ty
+
             rar
             ffmpeg
+
             obsidian
-            localsend
             android-file-transfer
+
+            localsend
+            wireguard-go
+            wireguard-tools
+
             yt-dlp
+            discord
             freetube
+
             proton-pass
             proton-authenticator
         ]
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-            # discord
             libreoffice
             prismlauncher
         ]
