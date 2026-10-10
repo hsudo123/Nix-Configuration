@@ -2,7 +2,8 @@
   description = "Hank's nix-darwin system flake";
 
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+		nixpkgs.url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
+		# nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
 		nix-darwin.url = "github:nix-darwin/nix-darwin/master";
 		nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -13,10 +14,11 @@
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+		hermes-agent.url = "github:NousResearch/hermes-agent";
+		hermes-agent.inputs.nixpkgs.follows = "nixpkgs";
+
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		import-tree.url = "github:vic/import-tree";
-
-		hermes-agent.url = "github:NousResearch/hermes-agent";
 		nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 	};
 
