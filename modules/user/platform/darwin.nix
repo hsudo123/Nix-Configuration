@@ -12,6 +12,17 @@
         home.stateVersion = "26.05";
         programs.home-manager.enable = true;
 
+        nix.package = pkgs.nix;
+        nix.settings = {
+            extra-substituters = [
+                "https://nix-community.cachix.org"
+            ];
+
+            extra-trusted-public-keys = [
+                "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+            ];
+        };
+
         home.file."Library/Rime/default.custom.yaml".source = ./double_pinyin/default.custom.yaml;
         home.file."Library/Rime/double_pinyin_flypy.custom.yaml".source = ./double_pinyin/double_pinyin_flypy.custom.yaml;
         home.file."Library/Rime/zh-hans-t-essay-bgc.gram".source = grammar;

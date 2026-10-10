@@ -1,11 +1,20 @@
 { inputs, ... }:
 
 {
-    flake.modules.darwin.nix = { pkgs, ... }: {
-        # nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system;
+    flake.modules.generic.nix = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
-        nix.settings.experimental-features = "nix-command flakes";
+        nix.settings = {
+            experimental-features = "nix-command flakes";
+            trusted-users = [ "root" "hanyu" ];
+            auto-optimise-store = true;
+        };
+    };
+
+    flake.modules.darwin.nix = { pkgs, ... }: {
+        imports = [
+            inputs.self.modules.generic.nix
+        ];
 
         nix.gc = {
             automatic = true;
@@ -15,13 +24,13 @@
     };
 
     flake.modules.nixos.nix = { pkgs, ... }: {
-        # nixpkgs.hostPlatform = pkgs.stdenv.hostPlatform.system;
-        nixpkgs.config.allowUnfree = true;
-
-        nix.settings.experimental-features = "nix-command flakes";
+        imports = [
+            inputs.self.modules.generic.nix
+        ];
 
         nix.gc = {
             automatic = true;
+            dates = "weekly";
             options = "--delete-older-than 7d";
         };
     };
