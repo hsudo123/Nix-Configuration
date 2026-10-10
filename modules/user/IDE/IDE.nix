@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-    flake.modules.homeManager.IDE = { config, pkgs, ... }: let 
+    flake.modules.homeManager.IDE = { config, pkgs, ... }: let
         official_extension = with pkgs.vscode-extensions; [
             ms-ceintl.vscode-language-pack-zh-hant
             # ms-vscode-remote.remote-ssh
@@ -59,7 +59,6 @@
         programs.zed-editor = {
             enable = true;
             extensions = [
-                "vscode-dark-modern"
                 "material-icon-theme"
                 "path-server"
                 "toml"

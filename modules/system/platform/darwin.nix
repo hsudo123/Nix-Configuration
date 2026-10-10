@@ -65,8 +65,8 @@
             
             dock = {
                 tilesize = 64;
-                autohide = false;
-                autohide-delay = 1.5;
+                autohide = true;
+                autohide-delay = 0.5;
                 launchanim = false;
                 static-only = false;
                 show-recents = false;

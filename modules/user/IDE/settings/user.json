@@ -1,19 +1,4 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Dark Modern",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.semanticHighlighting.enabled": true,
-    "continue.enableTabAutocomplete": false,
-    
-    "clangd.path": "clangd",
-    "C_Cpp.default.compilerPath": "g++",
-
-    "python.defaultInterpreterPath": "python",
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.extraPaths": [],
-    "basedpyright.analysis.typeCheckingMode": "standard",
-    "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
     "acp.agents": {
         "GitHub Copilot": {
             "command": "npx",
@@ -69,5 +54,22 @@
             "env": {}
         }
     },
-    "continue.enableNextEdit": true
+    "continue.enableNextEdit": true,
+    "update.titleBar": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.semanticHighlighting.enabled": true,
+    "continue.enableTabAutocomplete": false,
+
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    
+    "clangd.path": "clangd",
+    "C_Cpp.default.compilerPath": "g++",
+
+    "python.defaultInterpreterPath": "python",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [],
+    "basedpyright.analysis.typeCheckingMode": "standard"
 }
