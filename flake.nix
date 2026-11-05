@@ -15,7 +15,7 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
 		hermes-agent.url = "github:NousResearch/hermes-agent";
-		hermes-agent.inputs.nixpkgs.follows = "nixpkgs";
+		# hermes-agent.inputs.nixpkgs.follows = "nixpkgs";
 
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		import-tree.url = "github:vic/import-tree";
