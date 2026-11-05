@@ -381,6 +381,7 @@ platform_toolsets:
     - tts
     - vision
     - web
+    - mcp
 prefill_messages_file: ''
 privacy:
   redact_pii: false
@@ -564,6 +565,14 @@ x_search:
 plugins:
   enabled: []
 _config_version: 39
+
+mcp_servers:
+  nixos:
+    command: "/run/current-system/sw/bin/nix"
+    args:
+      - "run"
+      - "github:utensils/mcp-nixos"
+      - "--"
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

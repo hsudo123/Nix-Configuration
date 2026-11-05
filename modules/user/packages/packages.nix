@@ -62,6 +62,7 @@
             nil
             ruff
             ty
+            mcp-nixos
 
             rar
             ffmpeg
