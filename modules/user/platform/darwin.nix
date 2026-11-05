@@ -25,7 +25,7 @@
 
         home.file."Library/Rime/default.custom.yaml".source = ./double_pinyin/default.custom.yaml;
         home.file."Library/Rime/double_pinyin_flypy.custom.yaml".source = ./double_pinyin/double_pinyin_flypy.custom.yaml;
-        home.file."Library/Rime/zh-hans-t-essay-bgc.gram".source = grammar;
+        # home.file."Library/Rime/zh-hans-t-essay-bgc.gram".source = grammar;
         home.file."Library/Rime/double_pinyin_flypy.schema.yaml".source = ./double_pinyin/double_pinyin_flypy.schema.yaml;
     };
 }
