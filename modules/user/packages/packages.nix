@@ -62,7 +62,6 @@
             nil
             ruff
             ty
-            mcp-nixos
 
             rar
             ffmpeg
@@ -75,7 +74,6 @@
             wireguard-tools
 
             yt-dlp
-            discord
             freetube
 
             proton-pass
@@ -84,11 +82,14 @@
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
             libreoffice
             prismlauncher
+            blender
         ]
         ++ pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") [
             eqMac
             JViewer
 
+            mcp-nixos
+            discord
             mos
             stats
             rectangle
